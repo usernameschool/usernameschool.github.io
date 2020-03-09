@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */   
+   } 
+  </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Методы сортировки массивов</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Методы сортировки массивов</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+						
+						<p>
+    Сортировка представляет собой процесс упорядочения элементов в массиве в
+    порядке возрастания или убывания их значений. Например, массив А из n
+    элементов будет отсортирован в порядке возрастания значений его элементов,
+    если
+    <img
+        width="118"
+        height="19"
+        src="./img/r8.png"
+    />
+    , и в порядке убывания, если
+    <img
+        width="118"
+        height="19"
+        src="./img/r9.png"
+    />
+    .
+</p>
+<p>
+    Существует большое количество алгоритмов сортировки, но все они базируются
+    на трех основных:
+</p>
+<p>
+    - сортировка обменом;
+</p>
+<p>
+    - сортировка выбором;
+</p>
+<p>
+    - сортировка вставкой;
+</p>
+<p>
+    Алгоритмы сортировки отличаются друг от друга степенью эффективности, под
+    которой понимается:
+</p>
+<ul type="disc">
+    <li>
+        количество сравнений;
+    </li>
+    <li>
+        количество обменов, произведённых в процессе работы.
+    </li>
+</ul>
+<p>
+    <strong>Элементы массива можно сортировать:</strong>
+</p>
+<ul type="disc">
+    <li>
+        по возрастанию – каждый следующий элемент больше предыдущего
+        A[1]&lt;A[2]&lt;…&lt;A[n];
+    </li>
+    <li>
+        по неубыванию - каждый следующий элемент не меньше предыдущего A[1]
+        ≤A[2] ≤ … ≤ A[N];
+    </li>
+    <li>
+        по убыванию - каждый следующий элемент меньше предыдущего
+        A[1]&gt;A[2]&gt;…&gt;A[N];
+    </li>
+    <li>
+        по невозрастанию - каждый следующий элемент не больше предыдущего
+        A[1]≥A[2] ≥ … ≥ A[N]
+    </li>
+</ul>
+<p>
+    <strong>Сортировка обменом (метод «пузырька»)</strong>
+</p>
+<p>
+    · Последовательно сравниваются пары соседних элементов x[k] и x[k+1] (k =
+    1,2, ... , n-1) и, если их взаиморасположение не удовлетворяет заданному
+    условию, то они переставляются (меняются местами).
+</p>
+<p>
+    <strong>Сортировка выбором</strong>
+</p>
+<p>
+    · Отыскивается максимальный (минимальный) элемент и переносится в конец
+    массива. Затем этот метод применяется ко всем элементам, кроме последнего
+    (он уже находится на своем месте) и т.д.
+</p>
+<p>
+    · Другой вариант метода - перенос найденного элемента в начало массива и
+    последующее применение метода ко всем элементам, кроме первого и т.д.
+</p>
+<p>
+    <strong>Сортировка вставками</strong>
+</p>
+<p>
+    · Массив разделяется на две части: отсортированную и неотсортированную.
+    Элементы из неотсортированной части поочередно выбираются и вставляются в
+    отсортированную часть таким образом, что не нарушают упорядоченность
+элементов. В начале, в качестве отсортированной части принимают только    <em>один первый элемент.</em>
+</p>
+<p>
+    Итак, решим следующую задачу. Задан массив А из n целых чисел. Расположить
+    элементы массива в порядке возрастания их значений.
+</p>
+<p align="center">
+    <strong><em>Сортировка методом «пузырька»</em></strong>
+</p>
+<p>
+    Это один из простейших методов сортировки. В алгоритме выполняются
+    последовательные перемещения соседних элементов. Последовательно
+    просматриваются все пары рядом стоящих элементов массива и, если они
+    расположены в неправильном порядке, они меняются местами. Отсортированные
+    элементы не нуждаются в сравнении при последующих перемещениях, поэтому
+    второй проход перемещений выполняется до предпоследнего элемента и т. д.
+    Всего для массива размерности n требуется (n-1) проход. Это правило
+    действует до тех пор, пока все пары не будут стоять в правильном порядке
+    (то есть, по возрастанию или убыванию).
+</p>
+<p>
+    Алгоритм: последовательно сравниваем каждую пару соседних чисел и, в
+    зависимости от результата сравнения, переставляем элементы или оставляем на
+    месте. <em>Алгоритм реализуется с помощью двух вложенных циклов</em>.
+</p>
+<p>
+    <strong>
+        Сортировка элементов массива в порядке возрастания значений:
+    </strong>
+</p>
+<pre><p>    for 
+    i:=1 to n-1 do
+    begin
+    for 
+    j:=1 to n-i do
+    if 
+    A[j] <= A[j+1] then
+    begin
+    P:= A[j];
+    A[j]:= A[j+1];
+    A[j+1]:= P;
+    end;
+    end;</p></pre>
+<p align="center">
+    или
+</p>
+<pre><p>     for 
+    i:=1 to n-1 do 
+    for 
+    j:=n downto i+1 do 
+    if 
+    a[j-1]>a[j] then 
+    begin 
+    x:=a[j-1];
+    a[j-1]:=a[j];
+    a[j]:=x;
+    end;
+    end.</p></pre>
+<p align="center">
+    <strong>Сортировка выбором</strong>
+</p>
+<p>
+    Находится минимальный элемент массива и записывается в первую ячейку
+    массива, содержимое которой записывается на место найденного минимального
+    элемента. После чего находится минимальный элемент массива, начиная со
+    второго элемента, он записывается во вторую ячейку массива, содержимое
+    которой записывается на место найденного минимального элемента. Таким
+    образом, постепенно выстраивается упорядоченный массив.
+</p>
+<pre><p>     for 
+    i:=1 to n-1 do 
+    begin
+    k:=i;
+    x:=a[i];
+    for 
+    j:=i+1 to n do 
+    begin 
+    if 
+    a[j]< x then 
+    begin 
+    k:=j;
+    x:=a[k];
+    end;
+    end;
+    a[k]:=a[i];
+    a[i]:=x;
+    end;</p></pre>
+<p align="center">
+    <strong>Сортировка вставками</strong>
+</p>
+<p>
+    Сортировка вставками - примитивный алгоритм сортировки с высокой
+    вычислительной сложностью.
+</p>
+<p>
+    Плюсы:
+</p>
+<ul type="disc">
+    <li>
+        эффективен на небольших наборах данных, на наборах данных до десятков
+        элементов может оказаться лучшим;
+    </li>
+    <li>
+        эффективен на наборах данных, которые уже частично отсортированы;
+    </li>
+    <li>
+        это устойчивый алгоритм сортировки (не меняет порядок элементов,
+        которые уже отсортированы);
+    </li>
+    <li>
+        может сортировать список по мере его получения;
+    </li>
+</ul>
+<p>
+    Минусы:
+</p>
+<ul type="disc">
+    <li>
+        Очень высокая вычислительная сложность алгоритма.
+    </li>
+</ul>
+<p>
+    Основным преимуществом алгоритма сортировки вставками является возможность
+    сортировать массив по мере его получения, т. е. имея часть массива, можно
+    начинать его сортировать.
+</p>
+<p>
+    Сортировка вставками — простой алгоритм сортировки. Хотя этот метод
+    сортировки намного менее эффективен чем более сложные алгоритмы (такие как
+    быстрая сортировка), у него есть ряд преимуществ:
+</p>
+<p>
+    - прост в реализации;
+</p>
+<p>
+    - эффективен на небольших наборах данных;
+</p>
+<p>
+    - эффективен на наборах данных, которые уже частично отсортированы* это
+    устойчивый алгоритм сортировки (не меняет порядок элементов, которые уже
+    отсортированы);
+</p>
+<p>
+    - может сортировать список по мере его получения;
+</p>
+<p>
+    На каждом шаге алгоритма мы выбираем один из элементов входных данных и
+    вставляем его на нужную позицию в уже отсортированном списке, до тех пор,
+    пока набор входных данных не будет исчерпан. Выбор очередного элемента,
+    выбираемого из исходного массива, произволен; может использоваться
+    практически любой алгоритм выбора.
+</p>
+<pre><p>    for 
+    i := 2 to N do
+    if 
+    a[i - 1] > a[i] then
+    begin
+    x := a[i];
+    j := i - 1;
+    while 
+    (j > 0) and (a[j] > x) do
+    begin
+    a[j + 1] := a[j];
+    j := j - 1;
+    end;
+    a[j + 1] := x;
+    end.</p></pre>
+<p align="center">
+    или
+</p>
+<pre><p>    for 
+    i:=2 to N do 
+    begin 
+    x:=a[i];
+    j:=i;
+    while 
+    (j>1) and (x< a[j-1]) do
+    begin 
+    a[j]:=a[j-1];
+    j:=j-1;
+    end;
+    a[j]:=x;
+    end.</p></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="43114"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Блок-схема</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Что такое Блок-схема</b><br/>
+<input type="radio" value="0" name="Q1"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий.<br />
+<input type="radio" value="1" name="Q1"/> Формула<br />
+<input type="radio" value="2" name="Q1"/> Это определенным образом организованная последовательность действий, за конечное число шагов приводящая к решению задачи.<br />
+<input type="radio" value="3" name="Q1"/> Графический способ представления алгоритма, каждое действие при этом осуществляется рисованием последовательности геометрических фигур, каждая из которых подразумевает выполнение определенного действия алгоритма. Порядок выполнения действий указывается стрелками.<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Что НЕ является основным элементом блок-схемы</b><br/>
+<input type="radio" value="0" name="Q2"/> Блок вычислений<br />
+<input type="radio" value="1" name="Q2"/> Логический блок<br />
+<input type="radio" value="2" name="Q2"/> Разделитель<br />
+<input type="radio" value="3" name="Q2"/> Соединитель<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Базовые структуры алгоритмов - ...</b><br/>
+<input type="radio" value="0" name="Q3"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий<br />
+<input type="radio" value="1" name="Q3"/> Выборка определенных действий  <br />
+<input type="radio" value="2" name="Q3"/> Алгоритм предназначенный для записи других алгоритмов    <br />
+<input type="radio" value="3" name="Q3"/> Сложный код <br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> Как называется цикл с предусловием </b><br/>
+<input type="radio" value="0" name="Q4"/> Цикл «Пока»<br />
+<input type="radio" value="1" name="Q4"/> Цикл «До»<br />
+<input type="radio" value="2" name="Q4"/> Цикл «После»<br />
+<input type="radio" value="3" name="Q4"/> Цикл «От»<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Какое правила НЕ нужно использовать для создания циклов с параметром</b><br/>
+<input type="radio" value="0" name="Q5"/> Параметр цикла, его начальное и конечное значения и шаг должны быть одного типа<br />
+<input type="radio" value="1" name="Q5"/> Запрещено изменять в теле цикла значения начальное, текущее и конечное для параметра<br />
+<input type="radio" value="2" name="Q5"/> Запрещено входить в цикл, минуя блок модификации<br />
+<input type="radio" value="3" name="Q5"/> Запрещено выходить из цикла<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+<!-- Test created by service http://test.fromgomel.com -->
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="blog-post11.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post13.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>

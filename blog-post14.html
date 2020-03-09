@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */   
+   } 
+  </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Стандартные функции и процедуры для работы со строками</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Стандартные функции и процедуры для работы со строками</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+						
+							<p>
+    <strong><em>Строка -</em></strong>
+    это последовательность символов. Каждый символ занимает 1 байт памяти (код
+    ASCII). Количество символов в строке называется ее длиной. Длина строки
+    может находиться в диапазоне от 0 до 255. Строковые величины могут быть
+    константами и переменными.
+</p>
+<p>
+    <strong><em>Строковая константа </em></strong>
+    - это последовательность символов, заключенная в апострофы.
+</p>
+<p>
+    Строковые константы записываются как последовательности символов,
+    ограниченные апострофами.
+</p>
+<p>
+    Допускается формирование строк с использованием записи символов по
+    десятичному коду (в виде комбинации # и кода символа) и управляющих
+    символов (комбинации ^ и некоторых заглавных латинских букв).
+</p>
+<p>
+    Например:
+</p>
+<pre><p><strong>' Язык программирования ПАСКАЛЬ'</strong>
+</p></pre>
+<pre><strong>' 33-45-12'</strong></pre>
+<pre><strong>#54#32#61</strong></pre>
+<pre><p><strong>'abcde'^A^M</strong>
+</p></pre>
+<p>
+    Пустой символ обозначается двумя подряд стоящими апострофами. Если апостроф
+    входит в строку как литера, то при записи он удваивается.<strong></strong>
+</p>
+<p>
+    <strong><em>Строковая переменная </em></strong>
+    описывается в разделе описания переменных следующим образом:
+</p>
+<p>
+    <strong>Var</strong>
+    &lt;идентификатор&gt;: <strong>String</strong> [&lt;максимальная длина
+    строки&gt;].
+</p>
+<p>
+    Например:
+</p>
+<p>
+    <strong>Var </strong>
+    S:<strong> String</strong>[20].<strong></strong>
+</p>
+<p>
+    Длина строки может и не указываться в описании. В этом случае
+    подразумевается, что она максимальна — 255 символов.
+</p>
+<p>
+    Например:
+</p>
+<p>
+    <strong>Var</strong>
+    Slovo: <strong>String.</strong>
+</p>
+<p>
+    К каждому элементу строки можно обратиться по его номеру. Однако ввод и
+    вывод строк осуществляются целиком, а не поэлементно, как это происходит в
+    массивах. Число введенных символов не должно превышать указанного в
+    максимальном размере строки, так если такое превышение будет иметь место,
+    то «лишние» символы будут проигнорированы.
+</p>
+<p>
+    Пустой символ обозначается двумя подряд стоящими апострофами. Если апостроф
+    входит в строку как литера, то при записи он удваивается.
+</p>
+<p>
+    Переменные, описанные как строковые с разными максимальными длинами, можно
+    присваивать друг другу, хотя, при попытке присвоить короткой переменной
+    длинную, лишние символы будут отброшены.
+</p>
+<p>
+    Строковая переменная занимает в памяти на 1 байт больше, чем указанная в
+описании ее длина. Дело в том, что один (нулевой) байт содержит значение    <strong><em>текущей длины строки. </em></strong>Если строковой переменной
+    не присвоено никакого значения, ее текущая длина равна нулю.
+</p>
+<p>
+    По мере заполнения строки символами ее текущая длина возрастает, но она не
+    должна превышать максимального по описанию значения.
+</p>
+<p>
+    Символы внутри строки индексируются (нумеруются), начиная с единицы. Каждый
+    отдельный символ идентифицируется именем строки с индексом, заключенным в
+    квадратные скобки. Например:
+</p>
+<p>
+    <strong>Name[5], Name[i], Slovo[</strong>
+    <strong>к</strong>
+    <strong>+1].</strong>
+</p>
+<p>
+    Индекс может быть положительной константой, переменной величиной и
+    выражением целого типа. Значение индекса не должно выходить за границы
+    описания.
+</p>
+<p>
+    Тип <strong>String</strong> и стандартный тип <strong>Char</strong>
+    совместимы. Строки и символы могут употребляться в одних и тех же
+    выражениях. Выражения типа <strong>Char</strong> можно присваивать любым
+    строковым переменным.
+</p>
+<p>
+    Строковые выражения строятся из строковых констант, переменных, функций и
+    знаков операций. Над строковыми данными допустимы операции сцепления и
+    операции отношения.
+</p>
+<p>
+    <strong><em>Операция сцепления </em></strong>
+    (+) применяется для соединения нескольких строк в одну результирующую
+    строку. Сцеплять можно как строковые константы, так и переменные.
+</p>
+<p>
+    Например:
+</p>
+<p>
+    'ЭВМ'+' IВМ'+' PC'.
+</p>
+<p>
+    В результате получится строка
+</p>
+<p>
+    'ЭВМ IBM PC' .
+</p>
+<p>
+    Длина результирующей строки не должна превышать 255 символов.
+</p>
+<p>
+    <strong><em>Операции отношений </em></strong>
+    (=, &lt;, &gt;, &lt;=, &gt;=, &lt;&gt; ) производят сравнение двух строк, в
+    результате чего получают логическую величину (True или False). Операция
+    отношения имеет более низкий приоритет, чем операция сцепления. Сравнение
+    строк производится слева направо до первого несовпадающего символа, и
+    большей считается та строка, в которой первый несовпадающий символ имеет
+    больший номер в таблице символьной кодировки.
+</p>
+<p>
+    Если строки имеют различную длину, но в общей части символы совпадают,
+    считается, что более короткая строка меньше, чем более длинная. Строки
+    равны, если они полностью совпадают по длине и содержат одни и те же
+    символы. Например:
+</p>
+<img width="350" height="175" src="img/p1.jpg">
+<h3 >
+    Таблица ASCII кодов
+</h3>
+<img src="img/p2.jpg">
+<h3>Таблица ASCII кодов для русских букв</h3>
+<img src="img/p3.jpg">
+<h3>
+    Действия с символами. Стандартные процедуры и функции
+</h3>
+<p>
+    <strong>Функция Chr</strong>
+    <strong>(</strong>
+    <strong>k</strong>
+    <strong>)</strong>
+    преобразует числовой код символа из <strong>таблицы ASCII</strong> в
+    символ.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    c:= Chr(48); 
+    {c : Char}
+    {c = '0'}</p></pre>
+<p>
+    <strong>Функция Ord</strong>
+    <strong>(</strong>
+    <strong>k</strong>
+    <strong>)</strong>
+    преобразует символ в её числовой код из <strong>таблицы ASCII</strong>.
+</p>
+<p>
+    <strong>Функция Pred(</strong>
+    <strong>k</strong>
+    <strong>)</strong>
+    возвращает значение предыдущего символа из таблицы ASCII.
+</p>
+<p>
+    Например для символа 'P' (Pred (P)) эта функция возвратит символ 'O'.
+</p>
+<p>
+    <strong>Функция Succ(</strong>
+    <strong>k</strong>
+    <strong>)</strong>
+    обратная функции Pred. Для символа 'P' функция Succ (P) возвратит символ
+    'Q', то есть следующий символ из таблицы ASCII.
+</p>
+<p>
+    <strong>Процедура Inc (A,B)</strong>
+    увеличивает значение переменной A на значение B.
+</p>
+<p>
+    <strong>Процедура Dec(A,B)</strong>
+    уменьшает значение переменной A на значение B.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    Pred('[') = 'Z'
+    Succ('z') = '{'
+    Inc('a') = 'b'
+    Inc('c', 2) = 'e'
+    Dec('z') = 'y'
+    Dec(#0, 4) = '№' {#252}
+</p></pre>
+<p>
+    <strong>Функция UpCase(</strong>
+    <strong>k</strong>
+    <strong>)</strong>
+    преобразует строчные английские буквы в заглавные. Данная функция применима
+    только для строчных букв латинского алфавита.
+</p>
+<p align="center">
+    <strong>
+        <em>Стандартные процедуры и функции работы со строками</em>
+    </strong>
+</p>
+<p>
+    <strong>Функция Concat</strong>
+    (s1,s2,…, 
+    sn
+    :
+    String) - возвращает строку, являющуюся результатом слияния
+    строк s1, s2, …,sn.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    Concat('abc', '3de', ' ', 'X', 'yz') = 'abc3de Xyz'
+</p></pre>
+<p>
+    <strong>Функция Copy </strong>
+    (s : String; i, k : Byte) - возвращает подстроку длиной k символов, начиная
+    с позиции i.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    Copy ('abc3de Xyz', 2, 4) = 'bc3d'
+    Copy ('abc3de Xyz', 12, 4) = ''
+    Copy ('abc3de Xyz', 8, 14) = 'Xyz'
+</p></pre>
+<p>
+    <strong>Процедура Delete </strong>
+    (s : String; i, k : Byte) удаляет из строки s подстроку длиной k символов,
+    начиная с позиции i.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    s := 'abc3de Xyz';
+    Delete(s, 2, 3);
+    {s = 'ade Xyz'}
+    s := 'abc3de Xyz';
+    Delete(s, 8, 13);
+    {s = 'abc3de '}
+</p></pre>
+<p>
+    <strong>Процедура Insert </strong>
+    (ss, s: String; i: Byte) вставляет в строку s подстроку ss, начиная с
+    позиции i.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    s = 'abc3de Xyz';
+    Insert('xyz', s, 2);
+    {s = 'axyzbc3de Xyz'}
+    s := 'abc3de';
+    Insert('xyz', s, 12);
+    {s = 'abc3dexyz'}
+</p></pre>
+<p>
+    <strong>Функция </strong>
+    <strong>Length</strong>
+    <strong> </strong>
+    (s: String) возвращает длину строки s.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    Length('abc3de Xyz') = 10
+</p></pre>
+<p>
+    <strong>Функция Pos </strong>
+    (ss, s: String) определяет позицию, с которой начинается первое (считая
+    слева направо) вхождение подстроки ss в строку s. Если ss не содержится в
+    s, то функция возвращает значение 0.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    Pos('X', 'abc3de Xyz') = 8
+</p></pre>
+<p>
+    <strong>Процедура </strong>
+    <a href="http://pascal.net.ru/Str"><strong>Str</strong></a>
+(x: integer, s:    <a href="http://pascal.net.ru/string">String</a>) преобразует числовое
+    значение x в строку s. При этом для x может быть задан формат, как в
+    процедурах вывода write и writeln.
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    x := 123;
+    s := str(x:6,s);
+    Результат: s = ' 123'.
+    Str(156.4 : 7 : 2, s);
+    {s = ' 156.4 '}
+</p></pre>
+<p>
+    <strong>Процедура Val </strong>
+    (s: String; i: &lt;арифметический_тип&gt;; err: Byte) преобразует строку s
+    в числовое значение (в случае ошибки в переменную err будет записан номер
+    первого недопустимого символа).
+</p>
+<p>
+    Например:
+</p>
+<pre><p>    {s = '15.47'}
+    Val(s, x, err);
+    {x = 15.47}
+</p></pre>
+<p>
+    <strong>Пример 1. </strong>
+    Программа получения из слова «ВЕЛИЧИНА» слова «НАЛИЧИЕ»:
+</p>
+<pre><p>    Program Slovo_1;
+    Var 
+    S1, S2: String[10];
+    Begin
+    S1:= 'ВЕЛИЧИНА';
+    S2:= Copy(S1,7,2) + Copy(S1,3,4) + S1[2];
+    WriteLn(S2);
+    End.
+</p></pre>
+<p>
+    <strong>Пример 2. </strong>
+    Программа получения из слова «СТРОКА» слова «СЕТКА»:
+</p>
+<pre><p>    Program Slovo_2;
+    Var 
+    S1: String[10];
+    Begin
+    S1:= 'СТРОКА';
+    Delete(S1,3,2) ;
+    Insert('E',S1,2);
+    WriteLn(S1);
+    End.
+</p></pre>
+<p>
+    <strong>Пример 3. </strong>
+    Программа, формирующая символьную строку, состоящую из N звездочек (где N —
+    целое число, 1 &lt; N &lt; 255):
+</p>
+<pre><p>    Program Stars;
+    Var
+    A: String;
+    N, I: Byte;
+    Begin
+    Write ('Введите число звездочек: ');
+    ReadLn(N);
+    A:='';
+    For
+    I := 1 to N do
+    A:=A+'*';
+    WriteLn(A);
+    End.
+</p></pre>
+<p>
+    Здесь строковой переменной А сначала присваивается значение пустой строки
+    ("), а затем к ней присоединяются звездочки.
+</p>
+<p>
+    <strong>Пример 4. </strong>
+    Программа подсчета в символьной строке числа цифр, предшествующих первому
+    символу «!»:
+</p>
+<pre><p>    Program P1;
+    Var 
+    S:String;
+    k, I:Byte;
+    Begin
+    WriteLn('Введите строку');
+    ReadLn(S);
+    k:=0;
+    I:= 1;
+    While 
+(I &lt;= Length(S)) and (S [I] &lt;&gt;'!') do>
+    Begin
+    If 
+    (S[I]&gt;= '0') and (S[i]&lt;='9') then 
+    k:=k+1;
+    I:=I+1;
+    End;
+    WriteLn ('Количество цифр до символа "!" равно ', k);
+    End.
+</p></pre>
+<p>
+    В этой программе переменная k играет роль счетчика цифр, а переменная I —
+    роль параметра цикла. Выполнение цикла закончится при первом же выходе на
+    символ «!» или (если в строке такого символа нет) при выходе на конец
+    строки. Символ S[I] является цифрой, если истинно отношение '0' &lt; S[I]
+    &lt; '9'.
+</p>
+<br clear="all"/>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="43114"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Блок-схема</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Что такое Блок-схема</b><br/>
+<input type="radio" value="0" name="Q1"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий.<br />
+<input type="radio" value="1" name="Q1"/> Формула<br />
+<input type="radio" value="2" name="Q1"/> Это определенным образом организованная последовательность действий, за конечное число шагов приводящая к решению задачи.<br />
+<input type="radio" value="3" name="Q1"/> Графический способ представления алгоритма, каждое действие при этом осуществляется рисованием последовательности геометрических фигур, каждая из которых подразумевает выполнение определенного действия алгоритма. Порядок выполнения действий указывается стрелками.<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Что НЕ является основным элементом блок-схемы</b><br/>
+<input type="radio" value="0" name="Q2"/> Блок вычислений<br />
+<input type="radio" value="1" name="Q2"/> Логический блок<br />
+<input type="radio" value="2" name="Q2"/> Разделитель<br />
+<input type="radio" value="3" name="Q2"/> Соединитель<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Базовые структуры алгоритмов - ...</b><br/>
+<input type="radio" value="0" name="Q3"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий<br />
+<input type="radio" value="1" name="Q3"/> Выборка определенных действий  <br />
+<input type="radio" value="2" name="Q3"/> Алгоритм предназначенный для записи других алгоритмов    <br />
+<input type="radio" value="3" name="Q3"/> Сложный код <br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> Как называется цикл с предусловием </b><br/>
+<input type="radio" value="0" name="Q4"/> Цикл «Пока»<br />
+<input type="radio" value="1" name="Q4"/> Цикл «До»<br />
+<input type="radio" value="2" name="Q4"/> Цикл «После»<br />
+<input type="radio" value="3" name="Q4"/> Цикл «От»<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Какое правила НЕ нужно использовать для создания циклов с параметром</b><br/>
+<input type="radio" value="0" name="Q5"/> Параметр цикла, его начальное и конечное значения и шаг должны быть одного типа<br />
+<input type="radio" value="1" name="Q5"/> Запрещено изменять в теле цикла значения начальное, текущее и конечное для параметра<br />
+<input type="radio" value="2" name="Q5"/> Запрещено входить в цикл, минуя блок модификации<br />
+<input type="radio" value="3" name="Q5"/> Запрещено выходить из цикла<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+<!-- Test created by service http://test.fromgomel.com -->
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="blog-post13.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post15.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>

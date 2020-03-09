@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */   
+   } 
+  </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Вложенные циклы</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Вложенные циклы</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+						
+							<p>
+    При разработке алгоритмов решения большинства задач возникает необходимость
+    повторения ряда шагов. В языке Pascal имеются три различных оператора
+    цикла, с помощью которых можно запрограммировать повторяющиеся фрагменты
+    программ: с параметром, с предусловием и с постусловием.
+</p>
+<p align="center">
+    <strong><em>Использование операторов цикла с условиями</em></strong>
+</p>
+<p>
+    В языке Pascal существуют два оператора цикла с условиями. С их помощью
+    можно запрограммировать повторяющиеся фрагменты программы. Операторы цикла
+    с условиями проверяют условия выполнения или повторения цикла.
+</p>
+<p align="center">
+    <strong><em>Oператор цикла с предусловием</em></strong>
+</p>
+<p>
+    <strong>While </strong>
+    &lt;условие&gt; <strong>do </strong>&lt;тело цикла&gt;;
+</p>
+<p>
+    здесь <strong>while</strong>, <strong>do</strong> – зарезервированные
+    слова;
+</p>
+<p>
+    &lt;условие&gt; – выражение логического типа;
+</p>
+<p>
+    &lt;тело цикла&gt; – произвольный оператор, в том числе и составной.
+</p>
+<p>
+    Логическое выражение &lt;условие&gt; определяет, будет ли цикл выполняться
+или завершит свою работу. Если выражение &lt;условие&gt; имеет значение    <strong>true</strong>, то выполняется &lt;тело цикла&gt;, после чего
+    вычисление выражения &lt;условие&gt; и его проверка повторяются. Если
+&lt;условие&gt; имеет значение <strong>false</strong>, оператор    <strong>while</strong> прекращает свою работу, т. е. цикл заканчивается. В
+    качестве &lt;тело цикла&gt; может быть либо оператор, либо составной
+    оператор, т. е. последовательность операторов, заключенная в операторные
+    скобки <strong>begin</strong> ... <strong>end</strong>.
+</p>
+<p>
+    <strong>Пример.</strong>
+    Найти минимальное значение функции
+    <img
+        width="68"
+        height="24"
+        src="./img/r6.png"
+    />
+    на отрезке
+    <img
+        width="44"
+        height="31"
+        src="./img/r7.png"
+    />
+    с шагом 0,1.
+</p>
+<pre><p>      program minimum;
+    const 
+    h:real=0.1;
+    var 
+    y,b,x,min:real;
+    begin 
+    x:=1;
+    b:=10;
+    min:=sin(x);
+    writeln('Минимальное значение функции у=sin(x) ');
+    writeln(' на отрезке [1,10] шагом 0,1');
+    while 
+    x< =b do
+    begin 
+    y:=sin(x);
+    writeln(y:4:2);
+    if 
+    y< min then
+    min:=y;
+    x:=x+h;
+    end;
+    writeln('min=', min:2:1);
+    end.</p></pre>
+<p>
+    <strong>Пример.</strong>
+    Составить программу возведения чисел от 1 до 10 в третью степень.
+</p>
+<pre><p>       program ctep; {возведение в степень}
+    const
+    h:byte=1;
+    var 
+    a,b:integer;
+    x:real;
+    k:integer;
+    begin 
+    writeln('Возведение в третью степень чисел от 1 до 10');
+    a:=1;
+    b:=10;
+    k:=3;
+    while 
+    a< =b do
+    begin  
+    x:=exp(k*ln(a));
+    writeln(a,'^3=',x:4:0);
+    a:=a+h;
+    end;
+    end.</p></pre>
+<p>
+    <strong>Пример.</strong>
+    Табулирование функции
+    <img
+        width="68"
+        height="24"
+        src="./img/r6.png"
+    />
+    на отрезке [1; 5] с шагом 0.5.
+</p>
+<pre><p>       program tab;
+    const
+    h:real=0.5;
+    var
+    y,x,a,b:real;
+    begin
+    writeln('Табулирование функции y=sin(x) на отрезке [1,5] с шагом 0.5');
+    a:=1;
+    b:=5;
+    x:=a;
+    while 
+    x<=b do
+    begin
+    y:=sin(x);
+    writeln('y=', y:2:1);
+    x:=x+h;
+    end;
+    end.</p></pre>
+<p align="center">
+    <strong><em>Оператор цикла с постусловием</em></strong>
+</p>
+<p>
+    <strong>Repeat </strong>
+    &lt;тело цикла&gt; <strong>until </strong>&lt;условие&gt;;
+</p>
+<p>
+    здесь <strong>repeat</strong>, <strong>until</strong> – зарезервированные
+    слова (повторять до тех пор, [пока не будет выполнено условие]);
+</p>
+<p>
+    &lt;тело цикла&gt; – произвольная последовательность операторов;
+</p>
+<p>
+    &lt;условие&gt; – выражение логического типа.
+</p>
+<p>
+    Операторы &lt;тело цикла&gt; выполняются хотя бы один раз, после чего
+вычисляется выражение &lt;условие&gt;: если его значение есть    <strong>false</strong>, операторы &lt;тело цикла&gt; повторяются, в
+противном случае оператор <strong>repeat</strong>...<strong>until</strong>    <strong> </strong>завершает свою работу.<strong></strong>
+</p>
+<p>
+    <strong>Пример.</strong>
+    Вычислить максимальное значение функции
+    <img
+        width="68"
+        height="24"
+        src="./img/r6.png"
+    />
+    на отрезке
+    <img
+        width="44"
+        height="31"
+        src="./img/r7.png"
+    />
+    с шагом 0.5.
+</p>
+<pre><p>       program maximum;
+    const 
+    h: real=0.5;
+    var
+    y, b, x, max: real;
+    begin
+    writeln('Максимальное значение функции y=sin(x) на отрезке [1,10]
+    Шаг=0.5');
+    x:=1;
+    b:=10;
+    max:=-1; { начальное значение максимума }
+    repeat
+    y:=sin(x);
+    writeln(y:5:3);
+    if 
+    y>max then max:=y;
+    x:=x+h;
+    until 
+    x>b;
+    writeln('Максимальное значение функции y=sin(x) на отрезке max= ',max:2:9);
+    end.</p></pre>
+<p align="center">
+    <strong><em>Цикл с параметром</em></strong>
+</p>
+<p>
+    Если число повторений тела цикла заранее известно, то чаще всего
+    применяется оператор цикла с параметром.
+</p>
+<p>
+    Общий вид оператора:
+</p>
+<p>
+    <strong>for </strong>
+    &lt;параметр цикла&gt;:=&lt;начальное значение&gt; <strong>to </strong>
+    &lt;конечное значение &gt; <strong>do </strong>&lt;оператор&gt;;
+</p>
+<p>
+    или
+</p>
+<p>
+    <strong>for </strong>
+    &lt;параметр цикла&gt;:=&lt;конечное значение&gt; <strong>downto </strong>
+    &lt;начальное значение&gt; <strong>do </strong>&lt;оператор &gt;;
+</p>
+<p>
+    где &lt;параметр цикла&gt; – параметр цикла, переменная любого порядкового
+    типа;
+</p>
+<p>
+    &lt;начальное значение&gt; – начальное значение – выражение, задающее
+    начальное значение параметра цикла;
+</p>
+<p>
+    &lt;конечное значение&gt; – конечное значение – выражение, задающее
+    конечное значение параметра цикла.
+</p>
+<p>
+    Например:
+</p>
+<p>
+    <strong>for</strong>
+    I:=m <strong>to</strong> n <strong>do </strong>&lt;тело цикла&gt;
+</p>
+<p>
+    Оператор присваивает переменной I значение переменной m и увеличивает на
+    единицу до тех пор, пока переменная I не станет равна значению переменной
+    n.
+</p>
+<p>
+    <strong>for</strong>
+    I :=n <strong>downto</strong> m <strong>do</strong> &lt;тело цикла&gt;
+</p>
+<p>
+    Оператор присваивает переменной I значение переменной n и уменьшает на
+    единицу до тех пор, пока переменная I не станет равна значению переменной
+    m.
+</p>
+<p>
+    а) <strong>For</strong> i:=1 <strong>to</strong> 10 <strong>do</strong>
+</p>
+<p>
+    a:= a+1 ;
+</p>
+<p>
+    б) <strong>For</strong> i:=1 <strong>to</strong> 20 <strong>do</strong>
+</p>
+<p>
+    <strong>begin</strong>
+</p>
+<p>
+    a:= c+b ;
+</p>
+<p>
+    <strong>writeln</strong>
+    (a,b,c) ;
+</p>
+<p>
+    c:= c+1 ;
+</p>
+<p>
+    <strong>end ;</strong>
+</p>
+<p>
+    в) <strong>For</strong> k:=20 <strong>downto</strong> 1 <strong>do</strong>
+</p>
+<p>
+    <strong>writeln</strong>
+    (k*k);
+</p>
+<p align="center">
+    <strong><em>Выход из цикла</em></strong>
+</p>
+<p>
+    В циклах с условиями при большом объеме вычислений возможна ситуация, когда
+    время выполнения цикла становится слишком большим.
+</p>
+<p>
+    В этом случае необходимо использовать стандартную процедуру прекращения
+    выполнения цикла: <strong>break.</strong>
+</p>
+<p>
+    Эта процедура используется также для досрочного выхода из цикла в случае
+получения результата до конца выполнения цикла. Процедура    <strong>continue</strong> используется для досрочного перехода к следующей
+    операции цикла.
+</p>
+<p>
+    <strong>Пример.</strong>
+    Составить программу для возведения числа в степень.
+</p>
+<pre><p>        program P4;
+    var
+    k,i:integer;
+    n,y:longint;
+    begin
+    writeln(' Возведение числа в степень ');
+    writeln;
+    y:=1;
+    write('Введите число, возводимое в степень (число должно быть меньше 20) k
+    = ');
+    readln(k);
+    write('Введите целую степень { меньше 5 } n = ');
+    readln(n);
+    for 
+    i:=1 to n do y:=y*k;
+    writeln;
+    writeln('Число ',k,' в степени ',n, ' = ',y);
+    writeln;
+    writeln('Для окончания работы нажмите ENTER');
+    readln;
+    end.</p></pre>
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="43114"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Блок-схема</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Что такое Блок-схема</b><br/>
+<input type="radio" value="0" name="Q1"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий.<br />
+<input type="radio" value="1" name="Q1"/> Формула<br />
+<input type="radio" value="2" name="Q1"/> Это определенным образом организованная последовательность действий, за конечное число шагов приводящая к решению задачи.<br />
+<input type="radio" value="3" name="Q1"/> Графический способ представления алгоритма, каждое действие при этом осуществляется рисованием последовательности геометрических фигур, каждая из которых подразумевает выполнение определенного действия алгоритма. Порядок выполнения действий указывается стрелками.<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Что НЕ является основным элементом блок-схемы</b><br/>
+<input type="radio" value="0" name="Q2"/> Блок вычислений<br />
+<input type="radio" value="1" name="Q2"/> Логический блок<br />
+<input type="radio" value="2" name="Q2"/> Разделитель<br />
+<input type="radio" value="3" name="Q2"/> Соединитель<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Базовые структуры алгоритмов - ...</b><br/>
+<input type="radio" value="0" name="Q3"/> Это определенный набор блоков и стандартных способов их соединения для выполнения типичных последовательностей действий<br />
+<input type="radio" value="1" name="Q3"/> Выборка определенных действий  <br />
+<input type="radio" value="2" name="Q3"/> Алгоритм предназначенный для записи других алгоритмов    <br />
+<input type="radio" value="3" name="Q3"/> Сложный код <br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> Как называется цикл с предусловием </b><br/>
+<input type="radio" value="0" name="Q4"/> Цикл «Пока»<br />
+<input type="radio" value="1" name="Q4"/> Цикл «До»<br />
+<input type="radio" value="2" name="Q4"/> Цикл «После»<br />
+<input type="radio" value="3" name="Q4"/> Цикл «От»<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Какое правила НЕ нужно использовать для создания циклов с параметром</b><br/>
+<input type="radio" value="0" name="Q5"/> Параметр цикла, его начальное и конечное значения и шаг должны быть одного типа<br />
+<input type="radio" value="1" name="Q5"/> Запрещено изменять в теле цикла значения начальное, текущее и конечное для параметра<br />
+<input type="radio" value="2" name="Q5"/> Запрещено входить в цикл, минуя блок модификации<br />
+<input type="radio" value="3" name="Q5"/> Запрещено выходить из цикла<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+<!-- Test created by service http://test.fromgomel.com -->
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="blog-post10.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post12.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>
