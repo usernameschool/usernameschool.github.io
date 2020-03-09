@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */   
+   } 
+  </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Линейная программа. Операторы ввода – вывода</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Линейная программа. Операторы ввода – вывода</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+						<p><i>Ввод данных </i>— это передача информации от внешних устройств в оперативную память. Вводятся, как правило, исходные данные решаемой задачи.</p>
+<p>Ввод исходных данных, над которыми должны выполняться преобразования в программе, можно организовать различными способами.</p>
+<p>Рассмотрим эти способы.</p>
+<p><b>Ввод с клавиатуры</b></p>
+<p><b><i>Процедура ввода с клавиатуры</i></b><i> </i>имеет следующий формат:</p>
+<p><b>Read </b>(&lt;список ввода&gt;);</p>
+<p>Здесь &lt;список ввода&gt; — это последовательность имен переменных, разделенных запятыми, a Read (читать) — оператор обращения к стандартной процедуре ввода. Например:</p>
+<p>Read (а, b, с, d);</p>
+<p>При выполнении этого оператора работа компьютера прерывается, после чего пользователь набирает на клавиатуре значения переменных а, b, с, d, отделяя их друг от друга пробелами. При этом вводимые значения высвечиваются на экране. В конце набора нажимают клавишу &lt;Enter&gt;: Ввод значений должен выполняться в строгом соответствии с синтаксисом языка Паскаль.</p>
+<p>Например, при выполнении ввода в программе</p>
+<pre><p>	Var T : Real;
+	J: Integer;
+	К: Char;
+	Begin
+	Read (T, J, K);
+	на клавиатуре следует набрать
+	253.98 100 G [Enter].
+</p></pre>
+<p>Если в программе имеется несколько операторов Read, то данные для них вводятся потоком, т.е. после считывания значений переменных для одного оператора Read данные для следующего оператора до окончания строки считываются из той же строки на экране, что и для предыдущего затем происходит переход на следующую строку. Например, при выполнении ввода в программе</p>
+<pre><p>	Var А, В : Integer;
+	С, D : Real;
+	Begin
+	Read(А, В);
+	Read(С, D);
+	на клавиатуре следует набрать
+	18758 34[Enter] 2.62Е-02 1.54Е+01[Enter].
+	Оператор ввода с клавиатуры также может иметь вид:
+	Readln (<список ввода>);
+</p></pre>
+<p>Здесь ReadLn (от read line) — считать строку. В отличие от оператора Read после считывания последнего в списке значений для одного оператора ReadLn данные для следующего оператора ReadLn будут считываться с начала новой строки. Если в предыдущем примере заменить оператор Read на ReadLn, т.е. записать</p>
+<pre><p>	ReadLn(А, В);
+	ReadLn(С, D);
+	ввод значений будет происходить из двух строк:
+	18758 34 [Enter]
+	2.62Е-02 1.54Е+01 [Enter]
+</p></pre>
+<p>Эти операторы позволяют выполнять программу с различными значениями исходных данных.</p>
+<p>Данные логического типа вводить с клавиатуры нельзя.</p>
+<p><b>Ввод с помощью константы</b></p>
+<p>В разделе объявления констант происходит одновременное определение типа данных и их значений:</p>
+<pre><p>	Const
+	<имя>=<значение>; {именованная}
+	или
+	Const
+	<имя>:<тип>=<значение>; {типизированная}
+</p></pre>
+<p>Типизированная константа в отличие от простой константы может изменять свое значение в программе.</p>
+<pre><p>	Пример.
+	program post;
+	const
+	h=7; {константа целого типа}
+	y=5.87; {константа вещественного типа}
+	x:real=6.98799; {типизированная константа}
+	t='*'; {константа символьного типа}
+	r='информатика'; {константа строкового типа}
+	n:boolean=false; {константа логического типа}
+	begin
+	x:=x+h*y;
+	end.
+</p></pre>
+<p><b>Ввод с помощью оператора присваивания</b></p>
+<p>Оператор присваивания (:=) является основным оператором языка; он предназначен для изменения значения данных. Его обобщенный вид:</p>
+<p>&lt;переменная&gt;<b>:=</b>&lt;значение&gt;;</p>
+<p>при этом тип переменной и тип значения должны совпадать.</p>
+<pre><p>	Пример.
+	program prisv;
+	var
+	y: integer;
+	k,x: real;
+	v: char;
+	s: string;
+	log: boolean;
+	begin
+	y:=4+188;
+	k:=6.8;
+	x:=6.767Е-02-k;
+	v:='*';
+	log:=true;
+	s:='информатика';
+	end.
+</p></pre>
+<p>Обратите внимание: каждое объявление и каждый оператор заканчиваются знаком «;».</p>
+<p><b>Ввод с помощью датчика случайных чисел</b></p>
+<p>Датчик случайных чисел используется в программах для генерации случайных значений.</p>
+<p>Для того, чтобы в результате всегда выводились разные случайные числа в начале программы, вызывается стандартная процедура <b>Randomize</b>.</p>
+<p>Затем в разделе операторов вызывается функция <b>Random</b> или <b>Random</b> (Р), где P – целое число.</p>
+<p>Например:</p>
+<p>Х:=random(40);</p>
+<p>Y:=random;</p>
+<p>В этом случае переменная Х примет в качестве своего значения целое случайное число в диапазоне от 0 до 39, а переменная Y – случайное число в диапазоне от 0 до 1.</p>
+<pre><p>	Пример.
+	program datchik;
+	var
+	a: integer;
+	b,c: real;
+	begin
+	randomize;
+	a:=random(20);
+	b:=10*random;
+	c:=random;
+	end.
+</p></pre>
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+   <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="43222"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Линейная программа. Операторы ввода – вывода</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Для чего предназначен оператор Readln(a)?</b><br/>
+<input type="radio" value="0" name="Q1"/> Для вывода на экран<br />
+<input type="radio" value="1" name="Q1"/> Для печати результатов на принтере<br />
+<input type="radio" value="2" name="Q1"/> Для ввода символьных данных<br />
+<input type="radio" value="3" name="Q1"/> Для ввода данных с клавиатуры<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Определите результат работы программы: Writeln (‘5 + 5 =’, 5 + 5)</b><br/>
+<input type="radio" value="0" name="Q2"/> 10 = 10<br />
+<input type="radio" value="1" name="Q2"/> 20<br />
+<input type="radio" value="2" name="Q2"/> 5 + 5 = 10<br />
+<input type="radio" value="3" name="Q2"/> 5+ 5 = 5 + 5<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Скольких команд вывода достаточно для печати на экране твоей фамилии, имени и отчества?</b><br/>
+<input type="radio" value="0" name="Q3"/> Двух<br />
+<input type="radio" value="1" name="Q3"/> Одной<br />
+<input type="radio" value="2" name="Q3"/> Трех<br />
+<input type="radio" value="3" name="Q3"/> Четырех<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> Найдите логически неверно записанную последовательность команд:</b><br/>
+<input type="radio" value="0" name="Q4"/> Readln (F,Y); D:=F*Y; Y:=D+4; Writeln (F)<br />
+<input type="radio" value="1" name="Q4"/> Writeln (F); Readln (F,Y); D:=F*Y; Y:=D+4<br />
+<input type="radio" value="2" name="Q4"/> Readln (F,Y); Y:=D+4; d:=F*Y; Writeln (F)<br />
+<input type="radio" value="3" name="Q4"/> Readln (F,Y); D:=F*Y; Y:=D+4; Writeln (Y)<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Сколько данных нужно ввести для вычисления площади квадрата?</b><br/>
+<input type="radio" value="0" name="Q5"/> Два<br />
+<input type="radio" value="1" name="Q5"/> Одно<br />
+<input type="radio" value="2" name="Q5"/> Три<br />
+<input type="radio" value="3" name="Q5"/> Четыре<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+<!-- Test created by service http://test.fromgomel.com -->
+<!-- Test created by service http://test.fromgomel.com -->
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="blog-post7.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post9.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>

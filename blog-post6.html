@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Структура программы на языке программирования</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Структура программы на языке программирования</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+							<p><b><i>Структура программы на языке программирования Паскаль</i></b></p>
+<p>Структура программы, написанной на Турбо Паскале, состоит из заголовка программы и двух основных частей: раздела описаний и раздела операторов.</p>
+<pre><p>    PROGRAM Name; {Заголовок программы}
+    {Раздел описаний}
+    BEGIN
+    {Раздел операторов}
+    END.</p></pre>
+<p>Слово PROGRAM зарезервировано в Pascal и используется для объявления имени программы. Заголовок программы необязателен и игнорируется компьютером.</p>
+<p><i>Каждая операция описания, как и любое действие оператора, заканчивается символом </i>« ; ».</p>
+<p>Этот разделитель в языке Pascal отмечает конец оператора или описания. Использование особого разделителя позволяет располагать несколько операторов в одной строке.</p>
+<p>Зарезервированное слово BEGIN сигнализирует компилятору о начале другой части программы – раздела операторов. Завершает всю программу зарезервированное слово END. Точка оповещает компилятор о конце текста программы.</p>
+<p>Обязательной частью являются лишь тело программы (раздел операторов). Заголовок программы является хотя и необязательным, но желательным элементом.</p>
+<h2><a name="opis"></a>Раздел описаний</h2>
+<p>Раздел описаний состоит из следующих подразделов:</p>
+<p>· <b><i>Подключение внешних модулей</i></b>, необходимых для использования хранящихся в них наборов констант, типов данных, переменных, процедур и функций, которые можно использовать в своей программе;</p>
+<p>· <b><i>Описание меток</i></b>, используемых в программе;</p>
+<p>· <b><i>Описание констант</i></b>, объявляются идентификаторы, которые не могут изменять своего значения в «теле» программы. Исключение составляют лишь типизированные константы;</p>
+<p>· <b><i>Задание типов</i></b>, определение идентификаторов типов для дальнейшего их использования;</p>
+<p>· <b><i>Объявление переменных</i></b>, описываются идентификаторы, которые могут изменять свои значения в &quot;теле&quot; программы;</p>
+<p>· <b><i>Описание функций и процедур</i></b>, содержит процедуры и функции, написанные программистом.</p>
+<pre><p>    PROGRAM Name; {Заголовок программы}
+    Uses <имена модулей>; {Раздел подключения модулей}
+    {---------- РАЗДЕЛ описаний ----------}
+    Label {Раздел описания меток}
+    <имя метки>;
+    Const {Раздел описания констант}
+    <имя константы>= <значение>;
+    <имя константы>:<тип>=<значение>;
+    Type {Раздел описания типов}
+    <имя типа>=<тип>;
+    Var {Раздел описания переменных}
+    <имя переменной>:<тип>;
+    Function <имя > (параметры); {Раздел описания функций и процедур}
+    ……………
+    end;
+    Procedure <имя > (параметры); {Раздел описания функций и процедур}
+    ……………
+    end;
+    BEGIN
+    {Раздел операторов}
+    END.</p></pre>
+<p>Порядок размещения подразделов произвольный, можно создавать несколько одинаковых подразделов.</p>
+<p><b><i>Раздел операторов</i></b></p>
+<p>Раздел операторов содержит все операторы (команды), которые будут выполнены во время запуска программы, выделяется словами</p>
+<pre><p>    BEGIN
+    {Раздел операторов}
+    END.</p></pre>
+<p>После <b>END</b> ставится точка, что означает конец программы. Всё, что в дальнейшем буден написано после «<b>END.</b>» не воспринимается компилятором, и соответственно, будет проигнорировано в процессе исполнения программы.</p>
+<p><b><i>Алфавит языка. Лексика языка</i></b></p>
+<p>Язык программирования <i>Turbo Pascal</i> (как и любой другой язык) образуют три его составляющие: алфавит, синтаксис и семантика.</p>
+<p>Алфавитом языка называют совокупность всех допустимых символов, которые можно использовать в этом языке.</p>
+<p><i>Синтаксис </i>– система правил для записи допустимых конструкций языка программирования.</p>
+<p><i>Семантика </i>определяет смысловое значение предложений языка.</p>
+<p>Основными понятиями в языках программирования обычно являются алфавит языка, константы, переменные, встроенные функции, логические и арифметические выражения.</p>
+<p>Алфавит языка Паскаль включает:</p>
+<ol>
+	<li>Прописные и строчные буквы латинского алфавита от A до z. Нет различий между заглавными и строчными буквами при их использовании для определения имен идентификаторов, кроме случая, когда слово связано с текстовыми константами;</li>
+	<li>Символ подчеркивания ( _ ), который тоже считается буквой;</li>
+	<li>Арабские цифры <b>0 1 2 3 4 5 6 7 8 9;</b></li>
+	<li>Знаки арифметических операций: + - * / ^</li>
+	<li>Специальные символы: . , : ; { } [ ] ( )<b>% # ! $ &amp; </b><b>@</b></li>
+	<li>Буквы русского алфавита используются только для записи текстовых констант и комментариев к программе.</li>
+</ol>
+<p>Следующие комбинации специальных символов являются едиными символами, которые нельзя разделять пробелами:</p>
+<table border="0"><tr><td><p>:=</p>
+</td>
+<td><p>знак присваивания;</p>
+</td>
+</tr>
+<tr><td><p>&gt;=</p>
+</td>
+<td><p>больше или равно;</p>
+</td>
+</tr>
+<tr><td><p>&lt;=</p>
+</td>
+<td><p>меньше или равно;</p>
+</td>
+</tr>
+<tr><td><p>&lt;&gt;</p>
+</td>
+<td><p>не равно;</p>
+</td>
+</tr>
+<tr><td><p>(* *)</p>
+</td>
+<td><p>ограничители комментариев (наряду с { });</p>
+</td>
+</tr>
+<tr><td><p>(. .)</p>
+</td>
+<td><p>эквивалент [ ]</p>
+</td>
+</tr>
+</table>
+<p><i>Пробелы </i>— это символ пробела (ASCII-32) и все управляющие символы кода ASCII (от 0 до 31).</p>
+<p>К специальным символам относятся также <i>служебные (зарезервированные) слова, </i>смысл которых определен однозначно и которые не могут быть использованы для других целей. Для языка — это единые символы.</p>
+<p>Служебные слова языка Турбо Паскаль: absolute, and, array, begin, case, const, div, do, downto, else, end, external, file, for, forward, function, goto, if, implementation, in, inline, interface, interrupt, label, mod, nil, not, of, or, packed, procedure, program, record, repeat, set, shl, shr, string, then, to, type, unit, until, uses, var, while, with, xor.</p>
+<p>Последние версии языка Турбо Паскаль содержат также ряд служебных слов, относящихся к работе с объектами и встроенным ассемблером.</p>
+<p><b><i>Идентификаторы</i></b></p>
+<p><i>Идентификатором</i> называется символическое имя определенного программного объекта. <i>Идентификатор</i> - произвольная последовательность латинских букв, арабских цифр и символов подчеркивания. Идентификатор необходим для обозначения основных объектов языка: константы, переменные, типы данных, процедуры, функции, программы.</p>
+<p>В языке программирования Паскаль <u>нельзя</u> использовать в качестве идентификаторов:</p>
+<p>· зарезервированные слова (выделяются белым цветом);</p>
+<p>· имена встроенных процедур и функций;</p>
+<p>· имена, начинающиеся не с латинской буквы или не с символа подчеркивания;</p>
+<p>· имена, содержащие символы кроме латиницы, арабских цифр и символа подчеркивания;</p>
+<p>· слова, разделенные пробелом.</p>
+<p>Строчные и прописные буквы в идентификаторах и служебных словах не различаются.</p>
+<p>Длина идентификатора ограничена длинной программной строки (126 символов), но компилятор различает только первые 63 символа.</p>
+<p><b><i>Комментарии</i></b></p>
+<p>Конструкции следующего вида представляют собой комментарии и, поэтому, игнорируются компилятором:</p>
+<p>(любой текст, не содержащий символ «}»}</p>
+<p>(* любой текст, не содержащий символы «*)» *)</p>
+<p>Например:</p>
+<p>//Комментарий 1</p>
+<p>{Комментарий 2}</p>
+<p>Комментарий, содержащий знак <strong>$</strong> после открывающей скобки является директивой компилятора.</p>
+<p>Например:</p>
+<p>{$I+}-проверка ошибок ввода/вывода;</p>
+<p>{$R+}-проверка границ переменных;</p>
+<p>Комментарий может располагаться в любом месте программы.</p>
+<p><b><i>Типы данных языка программирования Турбо Паскаль</i></b></p>
+<p>Любые данные Турбо Паскаля характеризуются своими типами. Тип определяет:</p>
+<ol>
+	<li>Формат представления данных в памяти компьютера;</li>
+	<li>Множество допустимых значений, принимаемое переменной или константой, принадлежащей к выбранному типу;</li>
+	<li>Множество допустимых операций применимых к этому типу;</li>
+</ol>
+<p>Тип переменной определяется при ее декларации. Одна из базовых концепций Паскаля заключается в жесткой проверке соответствия типов в операциях присваивания.</p>
+<p>Типы данных в языке ТП делятся на 5 основных классов:</p>
+<ol>
+	<li>Простые типы;</li>
+	<li>Структурированные типы;</li>
+	<li>Ссылочные типы;</li>
+	<li>Процедурные типы;</li>
+	<li>Объектные типы;</li>
+</ol>
+<p><b><i>Простые типы данных</i></b></p>
+<p>К простым типам данных относятся числовые (целые и вещественные) типы, логический, символьный, перечисляемый и диапазонный (<i>интервальный</i>) тип.</p>
+<p><b>Типы данных Турбо Паскаля</b></p>
+<table border="1";text-align:"center"><tr><td><p><b>Идентификатор</b></p>
+</td>
+<td><p><b>Длина, байт</b></p>
+</td>
+<td><p><b>Диапазон (множество) значений</b></p>
+</td>
+</tr>
+<tr><td colspan="3"><p>Целые типы</p>
+</td>
+</tr>
+<tr><td><p><b>Byte</b></p>
+<p>(целое длиной в байт)</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p>0..255</p>
+</td>
+</tr>
+<tr><td><p><b>Word</b> (длиной в слово)</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p>0..65535</p>
+</td>
+</tr>
+<tr><td><p><b>Shortint</b> (короткое целое)</p>
+</td>
+<td><p>1</p>
+</td>
+<td><p>-128..127</p>
+</td>
+</tr>
+<tr><td><p><b>Integer</b> (целое)</p>
+</td>
+<td><p>2</p>
+</td>
+<td><p>-32768..32767</p>
+</td>
+</tr>
+<tr><td><p><b>Longint</b> (длинное целое)</p>
+</td>
+<td><p>4</p>
+</td>
+<td><p>-2147483648..2147483647</p>
+</td>
+</tr>
+<tr><td colspan="3"><p>Вещественные типы</p>
+</td>
+</tr>
+<tr><td><p><b>Real</b></p>
+</td>
+<td><p>6</p>
+</td>
+<td><p>2,9Е-39 – 1,7Е+38 (11 – 12)</p>
+</td>
+</tr>
+<tr><td><p><b>Single</b></p>
+</td>
+<td><p>4</p>
+</td>
+<td><p>1,5Е-45 – 3,4Е+38 (7 – 8)</p>
+</td>
+</tr>
+<tr><td><p><b>Double</b></p>
+</td>
+<td><p>8</p>
+</td>
+<td><p>5,0Е-324 – 1,7Е+308 (15 – 16)</p>
+</td>
+</tr>
+<tr><td><p><b>Extended</b></p>
+</td>
+<td><p>10</p>
+</td>
+<td><p>З,4Е-4932 – 1,1Е+4932 (19 – 20)</p>
+</td>
+</tr>
+<tr><td colspan="3"><p>Логический тип</p>
+</td>
+</tr>
+<tr><td><p><b>Boolean</b></p>
+</td>
+<td><p>1</p>
+</td>
+<td><p>True, False</p>
+</td>
+</tr>
+<tr><td colspan="3"><p>Символьный тип</p>
+</td>
+</tr>
+<tr><td><p><b>Char</b></p>
+</td>
+<td><p>1</p>
+</td>
+<td><p>Все символы кода ASCII</p>
+</td>
+</tr>
+</table>
+<p><i>Перечисляемый тип</i> данных задается перечислением всех значений, которые может принимать переменная данного типа. При описании отдельные значения указываются через запятую, а весь список заключается в круглые скобки.</p>
+<p>Например:</p>
+<p><b><i>Var</i></b><i> Month: (May, June, July, August);</i></p>
+<p><i>Диапазонный (интервальный)</i> тип представляет собой подмножество значений целого, символьного или перечисляемого типа и описывается в виде a..b, где a – нижняя граница, b – верхняя граница диапазона.</p>
+<p>Например:</p>
+<p><b>Var</b><b> </b>a: 0..10;</p>
+<p> b: 'a'.. 'b';</p>
+<p>Тип, на основе которого строится диапазонный тип, называется базовым для этого диапазонного типа.</p>
+<p><b><i>Выражения и операции. Оператор присваивания. Правила записи выражений и операций</i></b></p>
+<p><b><i>Арифметические операции</i></b></p>
+<p>К арифметическим типам данных относятся группы вещественных и целых типов данных. К ним применимы арифметические операции и операции отношений.</p>
+<p>Различают операции над данными <i>унарные </i>(применимые к одному операнду) и <i>бинарные </i>(применимые к двум операндам).</p>
+<p>Унарная арифметическая операция одна — это операция изменения знака следующего формата:</p>
+<p>— &lt;величина&gt;.</p>
+<p>Бинарные арифметические операции стандартного языка Паскаль описаны в таблице, где I - данные целого типа, a R - вещественного.</p>
+<table border="1"><tr><td><p><b>Знак</b></p>
+</td>
+<td><p><b>Выражение</b></p>
+</td>
+<td><p><b>Типы операндов</b></p>
+</td>
+<td><p><b>Тип результата</b></p>
+</td>
+<td><p><b>Операция</b></p>
+</td>
+</tr>
+<tr><td><p>+</p>
+</td>
+<td><p><i>A+B</i></p>
+</td>
+<td><p><i>R,R</i></p>
+<p><i>I,I</i></p>
+<p><i>I,R; R,I</i></p>
+</td>
+<td><p><i>R</i></p>
+<p><i>I</i></p>
+<p><i>R</i></p>
+</td>
+<td><p>Сложение</p>
+</td>
+</tr>
+<tr><td><p>-</p>
+</td>
+<td><p><i>A-B</i></p>
+</td>
+<td><p><i>R,R</i></p>
+<p><i>I,I</i></p>
+<p><i>I,R; R,I</i></p>
+</td>
+<td><p><i>R</i></p>
+<p><i>I</i></p>
+<p><i>R</i></p>
+</td>
+<td><p>Вычитание</p>
+</td>
+</tr>
+<tr><td><p>*</p>
+</td>
+<td><p><i>A*B</i></p>
+</td>
+<td><p><i>R,R</i></p>
+<p><i>I,I</i></p>
+<p><i>I,R; R,I</i></p>
+</td>
+<td><p><i>R</i></p>
+<p><i>I</i></p>
+<p><i>R</i></p>
+</td>
+<td><p>Умножение</p>
+</td>
+</tr>
+<tr><td><p>/</p>
+</td>
+<td><p><i>A/B</i></p>
+</td>
+<td><p><i>R,R</i></p>
+<p><i>I,I</i></p>
+<p><i>I,R; R,I</i></p>
+</td>
+<td><p><i>R</i></p>
+<p><i>R</i></p>
+<p><i>R</i></p>
+</td>
+<td><p>Деление</p>
+</td>
+</tr>
+<tr><td><p><i>div</i></p>
+</td>
+<td><p><i>A div B</i></p>
+</td>
+<td><p><i>I,I</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Целочисленное деление</p>
+</td>
+</tr>
+<tr><td><p><i>mod</i></p>
+</td>
+<td><p><i>A mod B</i></p>
+</td>
+<td><p><i>I,I</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Остаток от целочисленного деления</p>
+</td>
+</tr>
+</table>
+<p><b> </b></p>
+<p><b>Арифметическое выражение </b>задает порядок выполнения действий над числовыми величинами. Арифметические выражения содержат арифметические операции, функции, операнды, круглые скобки. Одна константа или одна переменная — это простейшая форма арифметического выражения.</p>
+<p>Например, математическое выражение</p>
+<p> <img width="160" height="63" src="./img/image15.png"></p>
+<p>записанное по правилам языка Паскаль будет иметь вид</p>
+<p> <img width="413" height="34" src="./img/image16.png"> .</p>
+
+</td>
+
+<p><b><i>Стандартные математические функции ТурбоПаскаля</i></b></p>
+<table border="1"><tr><td><p><b>Обращение</b></p>
+</td>
+<td><p><b>Тип аргумента</b></p>
+</td>
+<td><p><b>Тип результата</b></p>
+</td>
+<td><p><b>Примечание</b></p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Abs">Abs(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p>Модуль аргумента x</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_ArcTan">ArcTan(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Арктангенс x,(значение в радианах)</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Cos">Cos(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Косинус x, угол в радианах</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Exp">Exp(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p> <img width="27" height="21" src="./img/image23.png"> - экспонента x</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Frac">Frac(x)</a></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Дробная часть числа</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Int">Int(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Целая часть числа</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Ln">Ln(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Логарифм натуральный числа</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Pi">Pi</a></p>
+</td>
+<td><p><i>-</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>3,141592653</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Sin">Sin(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Синус x, угол в радианах</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Sqr">Sqr(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p>Квадрат числа</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Sqrt">Sqrt(x)</a></p>
+</td>
+<td><p><i>R, I</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Корень квадратный из числа</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Random">Random</a></p>
+</td>
+<td><p><i>-</i></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p>Псевдослучайное число в интервале [0, 1]</p>
+</td>
+</tr>
+<tr><td><p>Random(I)</p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Псевдослучайное число в интервале [0, I]</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Round">Round(x)</a></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Округление до ближайшего целого</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Trunc">Trunc(x)</a></p>
+</td>
+<td><p><i>R</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Отбрасывание дробной части числа, ближайшее целое, не превышающее число по модулю</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Trunc">Div(x)</a></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Целая часть числа при делении</p>
+</td>
+</tr>
+<tr><td><p><a href="http://www.pascal.helpov.net/index/pascal_Trunc">Mod(x)</a></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p><i>I</i></p>
+</td>
+<td><p>Остаток от деления</p>
+</td>
+</tr>
+</table>
+<p><b><i> </i></b></p>
+<p><b><i>Правила записи выражений и операций</i></b></p>
+<p>При записи арифметических выражений необходимо придерживаться следующих правил и ограничений:</p>
+<ol>
+	<li>Все символы выражения записываются в одну сторону, т.е. на одном уровне. Запрещены многоэтажные выражения и верхние и нижние индексы.</li>
+	<li>Два знака арифметических операций не должны располагаться рядом. Знак умножения опускать нельзя.</li>
+	<li>Операции в арифметическом выражении выполняются в порядке приоритета. Порядок убывания приоритетов операций следующий:</li>
+</ol>
+<p>1) вычисление функций;</p>
+<p>2) унарная операция смены знака (-);</p>
+<p>3) возведение в степень;</p>
+<p>4) умножение и деление;</p>
+<p>5) целочисленное деление;</p>
+<p>6) деление по модулю;</p>
+<p>7) сложение и вычитание.</p>
+<ol>
+	<li>Операции равного старшинства выполняются по порядку слева направо.</li>
+	<li>Часть выражения, заключенная в скобки, вычисляется в первую очередь.</li>
+	<li>Не следует записывать выражения, не имеющие математического смысла, например: деление на нуль, логарифм отрицательного числа и т.п.</li>
+</ol>
+<p>Тип арифметического выражения определяется типом ее результата.</p>
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="13221"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Структура программы на языке программирования</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Какого пункта нет в структуре программы?</b><br/>
+<input type="radio" value="0" name="Q1"/> Раздел пояснения программы<br />
+<input type="radio" value="1" name="Q1"/> Конец программы<br />
+<input type="radio" value="2" name="Q1"/> Раздел описания переменных<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Каждое выражение(каждый оператор) в программе отделяется друг от друга ...</b><br/>
+<input type="radio" value="0" name="Q2"/> Дефисом<br />
+<input type="radio" value="1" name="Q2"/> Точкой <br />
+<input type="radio" value="2" name="Q2"/> Точкой с запятой <br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Раздел var это ...</b><br/>
+<input type="radio" value="0" name="Q3"/> Конец программы <br />
+<input type="radio" value="1" name="Q3"/> Раздел описания переменных<br />
+<input type="radio" value="2" name="Q3"/> Раздел подключения библиотек<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> При выводе текста командой write он ...</b><br/>
+<input type="radio" value="0" name="Q4"/> Заключается между двумя запятыми <br />
+<input type="radio" value="1" name="Q4"/> Заключается в одинарные кавычки <br />
+<input type="radio" value="2" name="Q4"/> Заключается между двумя точками<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Система программирования PascalABC относится к ...</b><br/>
+<input type="radio" value="0" name="Q5"/> Инструментальному программному обеспечению<br />
+<input type="radio" value="1" name="Q5"/> Прикладному программному обеспечению<br />
+<input type="radio" value="2" name="Q5"/> Системному программу обеспечению<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+<!-- Test created by service http://test.fromgomel.com -->
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="blog-post5.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post7.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>

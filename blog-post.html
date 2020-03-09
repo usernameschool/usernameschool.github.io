@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Понятие алгоритма</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<body>
+
+		<!-- Header -->
+		<header id="header">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/logo.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#anchor">Содержание курса</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Hero-area -->
+		<div class="hero-area section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/blog-post-background.jpg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						
+						<h1 class="white-text">Понятие алгоритма</h1>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Hero-area -->
+
+		<!-- Blog -->
+		<div id="blog" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- main blog -->
+					<div id="main" class="col-md-12">
+						<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#panel1">Теория</a></li>
+  <li><a data-toggle="tab" href="#panel2">Практика</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div id="panel1" class="tab-pane fade in active">
+    
+    <p><div class="blog-post">
+							<p >Алгоритмом называется точная инструкция исполнителю в понятной для него форме, определяющая процесс достижения поставленной цели на основе имеющихся исходных данных за конечное число шагов.</p>
+							<p>В начале ХХ века алгоритмы стали объектом изучения математиков, появились различные математические уточнения понятия "алгоритм" и возникла целая отрасль математики – теория алгоритмов. Результаты, полученные теорией алгоритмов, служат теоретическим фундаментом всей компьютерной технологии, но в повседневной программистской практике не используются.</p>
+							
+							<blockquote>
+							  <p>Алгоритм - это определенным образом организованная последовательность действий, за конечное число шагов приводящая к решению задачи.</p>
+							</blockquote>
+							<p align="justify"><strong>Свойства алгоритмов :</strong></p>
+							<dl class="dl-horizontal">
+    <dt>Дискретность </dt>
+    <dd>Разделение выполнения решения задачи на отдельные операции.</dd>
+    <dt>Определенность</dt>
+    <dd>Каждая команда алгоритма должна однозначно определять действия исполнителя.</dd>
+    <dt>Результативность </dt>
+    <dd>Завершение работы алгоритма за конечное число шагов.</dd>
+    <dt>Массовость  </dt>
+    <dd>Алгоритм решения задачи разрабатывается в общем виде, то есть возможность решения класса задач, различающихся лишь исходными данными. </dd>
+    <dt>Понятность  </dt>
+    <dd>Одержание допустимого набора команд, понятного конкретному исполнителю. </dd>
+</dl>
+					<p><strong>Виды алгоритмов</strong></p>
+					<p>Алгоритмы в зависимости от цели, начальных условий задачи, путей ее решения, определения действий исполнителя подразделяются следующим образом:</p>
+					<p><mark>Механические алгоритмы</mark>, или иначе детерминированные, жесткие (например, алгоритм работы машины, двигателя и т.п.); </p>
+					<p><mark>Гибкие алгоритмы</mark>, механический алгоритм задает определенные действия, обозначая их в единственной и достоверной последовательности, обеспечивая тем самым однозначный требуемый или искомый результат, если выполняются те условия процесса, задачи, для которых разработан алгоритм. </p>
+					<p><mark>Вероятностный</mark>алгоритм дает программу решения задачи несколькими путями или способами, приводящими к вероятному достижению результата.</p>
+					<p><mark>Эвристический</mark>алгоритм (от греческого слова “эврика”) – это такой алгоритм, в котором достижение конечного результата программы действий однозначно не предопределено, так же как не обозначена вся последовательность действий, не выявлены все действия исполнителя. К эвристическим алгоритмам относят, например, инструкции и предписания.</p>
+					<p><mark>Линейный алгоритм</mark>– набор команд (указаний), выполняемых последовательно во времени друг за другом.</p>
+					<p><mark>Разветвляющийся алгоритм</mark>– алгоритм, содержащий хотя бы одно условие, в результате проверки которого ЭВМ обеспечивает переход на один из двух возможных шагов.</p>
+					<p><mark>Циклический алгоритм</mark>– алгоритм, предусматривающий многократное повторение одного и того же действия (одних и тех же операций) над новыми исходными данными. К циклическим алгоритмам сводится большинство методов вычислений, перебора вариантов.</p>
+					<p><mark>Цикл программы</mark>– последовательность команд (серия, тело цикла), которая может выполняться многократно (для новых исходных данных) до удовлетворения некоторого условия. </p>
+					<p><mark>Вспомогательный алгоритм</mark>– алгоритм, ранее разработанный и целиком используемый при алгоритмизации конкретной задачи. В некоторых случаях при наличии одинаковых последовательностей указаний (команд) для различных данных с целью сокращения записи также выделяют вспомогательный алгоритм.</p>
+					<p><strong>На всех этапах подготовки к алгоритмизации задачи широко используется структурное представление алгоритма.</strong></p>
+					<p><mark>Структурная схема алгоритма</mark>– графическое изображение алгоритма в виде схемы связанных между собой с помощью стрелок (линий перехода) блоков – графических символов, каждый из которых соответствует одному шагу алгоритма. Внутри блока дается описание соответствующего действия.</p>
+					<p>Графическое изображение алгоритма широко используется перед программированием задачи вследствие его наглядности, т.к. зрительное восприятие обычно облегчает процесс написания программы, ее корректировки при возможных ошибках, осмысливание процесса обработки информации.</p>
+					<p>Порядок выполнения алгоритма:</p>
+									<dl class="dl-horizontal">
+				    <dt>1.</dt>
+				    <dd>Действия в алгоритме выполняются в порядке их записи;</dd>
+				    <dt>2.</dt>
+				    <dd>Нельзя менять местами никакие два действия алгоритма;</dd>
+				    <dt>3.</dt>
+				    <dd>Нельзя не закончив одного действия переходить к следующему.</dd>
+				</dl>
+				<p>Для записи алгоритмов используются специальные языки:</p>
+				<dl class="dl-horizontal">
+				    <dt>1.</dt>
+				    <dd>Естественный язык (словесная запись);</dd>
+				    <dt>2.</dt>
+				    <dd>Формулы;</dd>
+				    <dt>3.</dt>
+				    <dd>Структурограммы;</dd>
+				     <dt>4.</dt>
+				    <dd>Синтаксические диаграммы;</dd>
+				     <dt>5.</dt>
+				    <dd>Графический (язык блок-схем).</dd>
+				</dl>
+					<p>Естественный язык: 
+если условие то действие 1 иначе действие 2 
+</p>
+<p>Структурограмма:</p>
+<img src="./img/blog-post.jpg">
+<p>Синтаксическая диаграмма:</p>
+<img src="./img/image2.jpg">
+<p>Графический язык:</p>
+<img src="./img/image3.jpg">
+<p>Составление алгоритмов графическим способом подчиняется двум ГОСТам: </p>
+<p>1.	ГОСТ 19.002-80, соответствует международному стандарту ИСО 2636-73. Регламентирует правила составления блок-схем.</p>
+<p>2.	ГОСТ 19.003-80, соответствует международному стандарту ИСО 1028-73. Регламентирует использование графических примитивов.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+  </div>
+  <div id="panel2" class="tab-pane fade">
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="11413"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4,f5) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+if (k==5&&f5.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==5) s="ОТЛИЧНО";
+if(nok<5) s="ХОРОШО";
+if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+   if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
+<center><b>Тест.Понятие алгоритма</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#000000;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Инструкция</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 5 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2.5 но менее 3.75 - УДОВЛЕТВОРИТЕЛЬНО, 3.75 и менее 5 - ХОРОШО, 5 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> Алгоритм – ...</b><br/>
+<input type="radio" value="0" name="Q1"/> Описание некоторой последовательности действий, приводящее к решению поставленной задачи.<br />
+<input type="radio" value="1" name="Q1"/> Комбинация компьютерных инструкций и данных, позволяющая аппаратному обеспечению вычислительной системы выполнять вычисления или функции управления<br />
+<input type="radio" value="2" name="Q1"/> Процесс и искусство создания компьютерных программ с помощью языков программирования<br />
+<input type="radio" value="3" name="Q1"/> Быстрая «черновая» реализация базовой функциональности для анализа работы системы в целом<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> Что относится к основным свойствам алгоритма</b><br/>
+<input type="radio" value="0" name="Q2"/> Дискретность<br />
+<input type="radio" value="1" name="Q2"/> Простота<br />
+<input type="radio" value="2" name="Q2"/> Рентабельность<br />
+<input type="radio" value="3" name="Q2"/> Унификация<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> Что входит в порядок выполнения алгоритма</b><br/>
+<input type="radio" value="0" name="Q3"/> Его сущность<br />
+<input type="radio" value="1" name="Q3"/> Само понятие алгоритма<br />
+<input type="radio" value="2" name="Q3"/> Лёгкость его исполнения<br />
+<input type="radio" value="3" name="Q3"/> Действия в алгоритме выполняются в порядке их записи<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T4"/><b> Каким ГОСТом подчиняется составление графических алгоритмов</b><br/>
+<input type="radio" value="0" name="Q4"/> ГОСТ 19.002-80<br />
+<input type="radio" value="1" name="Q4"/> ГОСТ 120.002-80<br />
+<input type="radio" value="2" name="Q4"/> ГОСТ 19.112-899<br />
+<input type="radio" value="3" name="Q4"/> ГОСТ 19-80<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T5"/><b> Что такое циклический алгоритм</b><br/>
+<input type="radio" value="0" name="Q5"/> Алгоритм, содержащий хотя бы одно условие, в результате проверки которого ЭВМ обеспечивает переход на один из двух возможных шагов.<br />
+<input type="radio" value="1" name="Q5"/> Набор команд (указаний), выполняемых последовательно во времени друг за другом.<br />
+<input type="radio" value="2" name="Q5"/> Алгоритм, предусматривающий многократное повторение одного и того же действия (одних и тех же операций) над новыми исходными данными. К циклическим алгоритмам сводится большинство методов вычислений, перебора вариантов.<br />
+<input type="radio" value="3" name="Q5"/> Последовательность команд (серия, тело цикла), которая может выполняться многократно (для новых исходных данных) до удовлетворения некоторого условия.<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="120" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Показать результат"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Сбросить ответы"/> 
+</CENTER>        
+</form> 
+
+						</div>
+						<!-- /blog post -->
+</p>
+  </div>
+  <a href="index.html" class="pagination-back pull-left">Назад</a>
+  <a href="blog-post1.html" class="pagination-next pull-right">Далее</a>
+  
+</div>
+
+					
+
+					
+
+						
+					</div>
+					<!-- /main blog -->
+
+					<!-- aside blog -->
+					<div id="aside" class="col-md-3">
+
+						
+
+						
+
+						
+
+					</div>
+					<!-- /aside blog -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Blog -->
+
+		<!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="index.html">
+								<img src="./img/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+				
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					
+
+					
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+<div id = "toTop" >  Наверх </div>
+	</body>
+</html>
